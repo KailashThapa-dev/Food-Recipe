@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login & Signup</title>
+  <link rel="stylesheet" href="../css/loginSignup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Food Recipe</h1>
+    <div class="form-container">
+      <div class="tab-buttons">
+        <button id="login-tab" class="active">Log In</button>
+        <button id="signup-tab">Sign Up</button>
+      </div>
+      
+      <!-- Login Form -->
+      <form id="login-form" name ="loginForm" class="form active" onsubmit=" return validationLogin()">
+        <h2>Log In</h2>
+
+        <!-- Email and Password Fields -->
+        <input type="text" placeholder="Email" name ="email" required>
+        <span class="formerror" id="emailerror"></span>
+        <input type="password" placeholder="Password" name = "password" required>
+        <span class="formerror" id="passworderror"></span>
+        <button type="submit">Log In</button>
+        <a href="#" class="forgot-password">Forgot your password?</a>     
+      </form>
+      
+     <!-- Signup Form -->
+<form id="signup-form" class="form" name="signupform" onsubmit="return validationSignup()">
+  <h2>Sign Up</h2>
+
+  <input type="text" placeholder="First Name" name="fname" required>
+  <span class="formerror" id="signup-fnameerror"></span>
+
+  <input type="text" placeholder="Last Name" name="lname" required>
+  <span class="formerror" id="signup-lnameerror"></span>
+
+  <input type="email" placeholder="Email" name="email" required>
+  <span class="formerror" id="signup-emailerror"></span>
+
+  <input type="password" placeholder="Password" name="password">
+  <span class="formerror" id="signup-passworderror"></span>
+
+  <button type="submit">Sign Up</button>
+</form>
+
+    </div>
+  </div>
+  <script src="Script/loginSwitch.js"></script>
+</body>
+</html>
+
